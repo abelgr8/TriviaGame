@@ -112,17 +112,16 @@ var game = {
             }
         });
 
-
         this.result();
     },
 
     result: function() {
         clearInterval(timer);
         $("#subwrapper h2").remove();
-
-        $("#subwrapper h2").html("<h2>Game Over<h2>");
-        $("#subwrapper h2").append("<h3>Correct Answers: " + this.correct + "<h3>");
-        $("#subwrapper h2").append("<h3>Wrong Answers: " + this.wrong + "<h3>");
-        $("#subwrapper h2").append("<h3> Unanswered: "+(questions.length-(this.incorrect+this.correct))+"</h3>");
+        $("#subwrapper").html("<h2>Game Over<h2>");
+        $("#subwrapper").append("<h3>Correct Answers: " + this.correct + "<h3>");
+        $("#subwrapper").append("<h3>Wrong Answers: " + this.wrong + "<h3>");
+        $("#subwrapper").append("<h3> Unanswered: "+(questions.length-(this.incorrect+this.correct))+"</h3>");
+        console.log("results");
     }
 }
